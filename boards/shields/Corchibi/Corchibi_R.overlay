@@ -34,17 +34,6 @@
 };
 
 / {
-    // 外部モジュールを使用した高度な加速度ノードの定義
-    zip_pointing_accel: zip_pointing_accel {
-        compatible = "zmk,input-processor-pointing-acceleration";
-        min-factor = <1000>; // 1000 = 1倍（ゆっくり動かす時はそのままの速度）
-        max-factor = <5000>; // 5000 = 最大で5倍まで加速
-        speed-threshold = <500>; // 動かす速さが500カウント/秒を超えると加速が始まる
-        speed-max = <2000>; // 動かす速さが2000に達すると、最大の5倍ゲインになる
-        acceleration-exponent = <2>; // 2次曲線（徐々に強くなるスムーズな加速カーブ）
-    };
-
-    // 右手用スクロールリスナー（スクロール専用）
     trackball_listener_R_scroll: trackball_listener_R_scroll {
         compatible = "zmk,input-listener";
         status = "okay";
@@ -55,14 +44,11 @@
     };
 };
 
-// 右手用メインリスナー（マウス移動用）
 &trackball_listener_R {
     status = "okay";
     device = <&trackball_R>;
     input-processors = 
-        // ここで上で定義した加速度ノードを適用
-        <&zip_pointing_accel>,
-        <&zip_xy_scaler 1 1>;
+        <&zip_xy_scaler 3 1>;
 };
 
 &i2c0 {
@@ -75,7 +61,6 @@
     #address-cells = <1>;
     #size-cells = <0>;
 
-    // 0x73: マウスカーソル (Contru1)
     trackball_R: trackball_R@73 {
         compatible = "pixart,pat912x";
         reg = <0x73>;
@@ -87,7 +72,6 @@
         zephyr,axis-y = <INPUT_REL_Y>;
     };
 
-    // 0x75: スクロール (Contru2)
     trackball_R_scroll: trackball_R_scroll@75 {
         compatible = "pixart,pat912x";
         reg = <0x75>;
