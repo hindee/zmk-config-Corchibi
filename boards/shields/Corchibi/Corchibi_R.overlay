@@ -37,11 +37,11 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
     codes = <INPUT_REL_X INPUT_REL_Y>;
-    sensor-dpi = <1200>;
-    min-factor = <500>; 
-    max-factor = <625>; 
-    speed-threshold = <500>; 
-    speed-max = <2000>; 
+    sensor-dpi = <190>;
+    min-factor = <1000>; 
+    max-factor = <3500>; 
+    speed-threshold = <200>; 
+    speed-max = <1000>; 
     acceleration-exponent = <2>; 
 };
 
@@ -88,8 +88,8 @@
         reg = <0x73>;
         status = "okay";
         motion-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        res-x-cpi = <1200>;
-        res-y-cpi = <1200>;
+        res-x-cpi = <190>;
+        res-y-cpi = <190>;
         zephyr,axis-x = <INPUT_REL_X>;
         zephyr,axis-y = <INPUT_REL_Y>;
     };
@@ -99,8 +99,8 @@
         reg = <0x75>;
         status = "okay";
         motion-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        res-x-cpi = <1200>;
-        res-y-cpi = <1200>;
+        res-x-cpi = <190>;
+        res-y-cpi = <190>;
         zephyr,axis-x = <INPUT_REL_X>;
         zephyr,axis-y = <INPUT_REL_Y>;
     };
