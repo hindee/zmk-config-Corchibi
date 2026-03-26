@@ -37,9 +37,9 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
     codes = <INPUT_REL_X INPUT_REL_Y>;
-    sensor-dpi = <600>;
-    min-factor = <1000>; 
-    max-factor = <1250>; 
+    sensor-dpi = <1200>;
+    min-factor = <500>; 
+    max-factor = <625>; 
     speed-threshold = <500>; 
     speed-max = <2000>; 
     acceleration-exponent = <2>; 
@@ -79,7 +79,7 @@
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    clock-frequency = <I2C_BITRATE_FAST>;
+    clock-frequency = <I2C_BITRATE_FAST_PLUS>;
     #address-cells = <1>;
     #size-cells = <0>;
 
@@ -88,8 +88,8 @@
         reg = <0x73>;
         status = "okay";
         motion-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        res-x-cpi = <600>;
-        res-y-cpi = <600>;
+        res-x-cpi = <1200>;
+        res-y-cpi = <1200>;
         zephyr,axis-x = <INPUT_REL_X>;
         zephyr,axis-y = <INPUT_REL_Y>;
     };
@@ -99,8 +99,8 @@
         reg = <0x75>;
         status = "okay";
         motion-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        res-x-cpi = <600>;
-        res-y-cpi = <600>;
+        res-x-cpi = <1200>;
+        res-y-cpi = <1200>;
         zephyr,axis-x = <INPUT_REL_X>;
         zephyr,axis-y = <INPUT_REL_Y>;
     };
