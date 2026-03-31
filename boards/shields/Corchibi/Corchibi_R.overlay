@@ -60,12 +60,22 @@
     };
 };
 
+/ {
+    /* Auto-mouse layer with typing vibration protection */
+    auto_mouse_layer: auto_mouse_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <200>;
+        excluded-positions = <38 36 46>;  /* J(MB1), K(MB3), L(MB2) */
+    };
+};
+
 &trackball_listener_R {
     status = "okay";
     device = <&trackball_R>;
-    input-processors = 
+    input-processors =
         <&zip_report_rate_limit 8>,
-        <&zip_temp_layer 1 700>,
+        <&auto_mouse_layer 1 700>,
         <&pointer_accel>;
 
     scroll_layer {
