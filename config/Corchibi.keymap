@@ -5,6 +5,26 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    behaviors {
+        TB1_mouse: TB1_mouse {
+            compatible = "zmk,behavior-none";
+            label = "TB19M";
+            #binding-cells = <0>;
+        };
+        TB1_scroll: TB1_scroll {
+            compatible = "zmk,behavior-none";
+            #binding-cells = <0>;
+        };
+        TB2_mouse: TB2_mouse {
+            compatible = "zmk,behavior-none";
+            #binding-cells = <0>;
+        };
+        TB2_scroll: TB2_scroll {
+            compatible = "zmk,behavior-none";
+            #binding-cells = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
