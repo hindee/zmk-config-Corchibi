@@ -8,6 +8,14 @@
 [サポートDiscordサーバー](https://discord.gg/nryEcZ6YjU　)
 基本的には購入者様向けのサーバーになります、購入検討されている方も興味があればご参加ください。
 
+---
+## 今のキーマップ
+
+<img src="keymap-drawer/Corchibi.svg" >
+
+- [トラボ等のモジュール配置をするには？](keymap-drawer/keymap-draw.md)
+---
+
 # Corchibi キー配列カスタマイズ手順
 
 ※作業にはGitHubアカウントが必要となります。
