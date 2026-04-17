@@ -43,11 +43,12 @@
 
     #address-cells = <1>;
     #size-cells = <0>;
-    trackball_L: trackball_L@73 {
+
+    trackball_L: trackball_L@75 {
         compatible = "pixart,pat9125";
-        reg = <0x73>;
+        reg = <0x75>;
         status = "okay";
-        motion-gpios = <&gpio1 12 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        motion-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         res-x-cpi = <1200>;
         res-y-cpi = <1200>;
         zephyr,axis-x = <INPUT_REL_X>;

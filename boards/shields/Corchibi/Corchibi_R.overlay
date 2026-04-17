@@ -38,13 +38,13 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
     codes = <INPUT_REL_X INPUT_REL_Y>;
-    sensitivity = <10>; 
-    min-factor = <1000>; 
-    max-factor = <1000>; 
-    speed-threshold = <400>;   
-    speed-max = <3000>;        
-    acceleration-exponent = <1>; 
-    sensor-dpi = <1200>;       
+    sensitivity = <10>;
+    min-factor = <1000>;
+    max-factor = <1000>;
+    speed-threshold = <400>;
+    speed-max = <3000>;
+    acceleration-exponent = <1>;
+    sensor-dpi = <1200>;
 };
 
 / {
@@ -121,11 +121,13 @@
     };
 };
 
-/* L側のトラックボール信号を親機でマウスカーソルとして上書き受信する設定 */
+/* L側のトラックボール信号をスクロールとして受信する設定 */
 &trackball_listener_L {
     status = "okay";
     device = <&trackball_split_L>;
-    input-processors = 
+    input-processors =
         <&zip_report_rate_limit 8>,
-        <&pointer_accel>;
+        <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_xy_to_scroll_mapper>,
+        <&zip_scroll_scaler 1 4>;
 };
