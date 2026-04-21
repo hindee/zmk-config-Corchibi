@@ -1,4 +1,53 @@
 <svg width="956" height="2154" viewBox="0 0 956 2154" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>/* start glyphs */
+<svg id="rotaryencoder">
+<svg xmlns="http://www.w3.org/2000/svg"
+ 
+  viewBox="-0.5 -0.5 60 60">
+  <defs>
+    <radialGradient id="wheelgrad" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="70%" stop-color="#F0F0F0"/>
+      <stop offset="100%" stop-color="#E8E8E8"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="30" cy="30" r="29.5"
+    fill="url(#wheelgrad)"
+    stroke="#D8D8D8"
+    stroke-width="0.5"/>
+
+  <g stroke="#C8C8C8" stroke-width="1.3" stroke-linecap="round">
+    <line transform="rotate(0 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(30 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(60 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(90 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(120 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(150 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(180 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(210 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(240 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(270 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(300 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+    <line transform="rotate(330 30 30)" x1="30" y1="0" x2="32.12" y2="2.12"/>
+  </g>
+</svg>
+
+</svg>
+<svg id="trackball_19mm">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs>
+    <radialGradient id="trackball-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dddddd"/>
+    </radialGradient>
+  </defs>
+  <rect x="2" y="2" fill="#ffffff" stroke="#000000"/>
+  <ellipse cx="48" cy="48" rx="46" ry="46" fill="url(#trackball-gradient)" stroke="#000000"/>
+</svg>
+
+</svg>
+</defs>/* end glyphs */
 <style>/* inherit to force styles through use tags */
 svg path {
     fill: inherit;
@@ -269,7 +318,8 @@ text { fill: #000000; }
 <g transform="translate(364, 154)" class="key keypos-19">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key"/>
-<text x="0" y="0" class="key tap">9</text>
+<use href="#rotaryencoder" xlink:href="#rotaryencoder" x="-29" y="-29" height="58" width="58.0" class="key tap glyph rotaryencoder"/>
+<text x="0" y="25" class="key hold">↑↓</text>
 </g>
 <g transform="translate(84, 56)" class="key keypos-20">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
@@ -393,9 +443,9 @@ text { fill: #000000; }
 <g transform="translate(610, 236) rotate(-11.93)" class="key keypos-43">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key"/>
-<a href="#x_x">
-<text x="0" y="0" class="key tap layer-activator">3</text>
-</a></g>
+<use href="#trackball_19mm" xlink:href="#trackball_19mm" x="-29" y="-29" height="58" width="58.0" class="key tap glyph trackball_19mm"/>
+<text x="0" y="25" class="key hold">Mouse</text>
+</g>
 <g transform="translate(532, 154)" class="key keypos-44">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key"/>
@@ -1168,9 +1218,10 @@ text { fill: #000000; }
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(610, 236) rotate(-11.93)" class="key held keypos-43">
-<rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key held side"/>
-<rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key held"/>
+<g transform="translate(610, 236) rotate(-11.93)" class="key trans keypos-43">
+<rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key trans side"/>
+<rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(532, 154)" class="key trans keypos-44">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key trans side"/>

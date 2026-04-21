@@ -20,7 +20,7 @@ layers:
   - G
   - B
   - '2'
-  - '9'
+  - {t: $$rotaryencoder$$, h: ↑↓}
   - Q
   - S
   - C
@@ -44,7 +44,7 @@ layers:
   - {t: A, h: '5'}
   - H
   - N
-  - '3'
+  - {t: $$trackball_19mm$$, h: Mouse}
   - '8'
   - P
   - L
@@ -197,7 +197,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
