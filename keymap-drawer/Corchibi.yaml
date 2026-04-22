@@ -44,8 +44,8 @@ layers:
   - {t: A, h: '5'}
   - H
   - N
+  - {t: Ctl+C, h: '1'}
   - {t: $$trackball_19mm$$, h: Mouse}
-  - '8'
   - P
   - L
   - ','

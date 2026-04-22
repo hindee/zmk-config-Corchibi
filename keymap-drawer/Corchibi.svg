@@ -443,13 +443,15 @@ text { fill: #000000; }
 <g transform="translate(610, 236) rotate(-11.93)" class="key keypos-43">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key"/>
-<use href="#trackball_19mm" xlink:href="#trackball_19mm" x="-29" y="-29" height="58" width="58.0" class="key tap glyph trackball_19mm"/>
-<text x="0" y="25" class="key hold">Mouse</text>
-</g>
+<text x="0" y="0" class="key tap">Ctl+C</text>
+<a href="#x_x">
+<text x="0" y="25" class="key hold layer-activator">1</text>
+</a></g>
 <g transform="translate(532, 154)" class="key keypos-44">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key"/>
-<text x="0" y="0" class="key tap">8</text>
+<use href="#trackball_19mm" xlink:href="#trackball_19mm" x="-29" y="-29" height="58" width="58.0" class="key tap glyph trackball_19mm"/>
+<text x="0" y="25" class="key hold">Mouse</text>
 </g>
 <g transform="translate(812, 56)" class="key keypos-45">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
