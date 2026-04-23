@@ -464,7 +464,7 @@ text { fill: #000000; }
 <g transform="translate(532, 154)" class="key keypos-44">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
 <rect rx="8" ry="8" x="-21" y="-21" width="42" height="42" class="key"/>
-<text x="0" y="0" class="key tap">ESCAPE</text>
+<text x="0" y="0" class="key tap">⎋</text>
 </g>
 <g transform="translate(812, 56)" class="key keypos-45">
 <rect rx="6" ry="6" x="-27" y="-27" width="54" height="54" class="key side"/>
