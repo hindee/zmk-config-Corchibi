@@ -35,7 +35,7 @@ draw_config:
   svg_extra_style: |
     svg.keymap {
       # background-color: #434343 !important;
-      background-color: #000000 !important;
+      background-color: #333333 !important;
       font-family: Ubuntu Mono, Inconsolata, Consolas, Liberation Mono, Menlo, monospace;
       font-size: 14px;
       font-weight: bold;
