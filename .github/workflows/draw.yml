@@ -21,7 +21,7 @@ on:
       - "boards/shields/Corchibi/Corchibi.dtsi"
 
 jobs:
-  # ジョブ1: テーマを適用した config ファイルを生成してアーティファクトに保存する
+  # ジョブ1: テーマを適用した config ファイルを生成してコミットする
   prepare-config:
     runs-on: ubuntu-latest
     permissions:
@@ -31,6 +31,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 最新の状態を取得して non-fast-forward を防ぐ
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
 
       # テーマ名を決定する
       # 手動実行でテーマが指定されていればそれを優先、なければ theme.txt を読む
@@ -60,6 +64,7 @@ jobs:
         with:
           commit_message: "[Config] Generate keymap_drawer.config.yaml (theme: ${{ steps.resolve_theme.outputs.theme }})"
           file_pattern: keymap-drawer/keymap_drawer.config.yaml
+          push_options: '--force-with-lease'
 
   # ジョブ2: 生成した config を使って keymap-drawer で SVG を描画する
   draw:
