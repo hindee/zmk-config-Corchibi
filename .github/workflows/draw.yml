@@ -24,6 +24,8 @@ jobs:
   # ジョブ1: テーマを適用した config ファイルを生成してアーティファクトに保存する
   prepare-config:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     outputs:
       theme: ${{ steps.resolve_theme.outputs.theme }}
 
