@@ -51,7 +51,7 @@
     </radialGradient>
   </defs>
   <rect x="2" y="2" fill="#ffffff" stroke="#000000"/>
-  <ellipse cx="48" cy="48" rx="46" ry="46" fill="url(#trackball-gradient)" stroke="#888888" stroke-width="2.5" />
+  <ellipse cx="48" cy="48" rx="46" ry="46" fill="url(#trackball-gradient)" stroke="#888888" stroke-width="3.5" />
 </svg>
 
 </svg>
