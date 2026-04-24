@@ -32,7 +32,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # 最新の状態を取得して non-fast-forward を防ぐ
           ref: ${{ github.head_ref || github.ref_name }}
           fetch-depth: 0
 
@@ -60,11 +59,18 @@ jobs:
       # 生成した config をコミットしてリポジトリに保存する
       # draw ジョブの config_path はリポジトリ内のパスを参照するため
       - name: Commit generated config
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "[Config] Generate keymap_drawer.config.yaml (theme: ${{ steps.resolve_theme.outputs.theme }})"
-          file_pattern: keymap-drawer/keymap_drawer.config.yaml
-          push_options: '--force-with-lease'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add keymap-drawer/keymap_drawer.config.yaml
+          # 差分がない場合はコミットをスキップ
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "[Config] Generate keymap_drawer.config.yaml (theme: ${{ steps.resolve_theme.outputs.theme }})"
+            git pull --rebase origin ${{ github.head_ref || github.ref_name }}
+            git push origin ${{ github.head_ref || github.ref_name }}
+          fi
 
   # ジョブ2: 生成した config を使って keymap-drawer で SVG を描画する
   draw:
