@@ -42,8 +42,11 @@ draw_config:
     }
     rect.key {
       fill: ${THEME_KEY_FILL} !important;      /* キーの色 */
-      stroke: ${THEME_KEY_STROKE} !important;    /* 枠線の色 */
+      stroke: ${THEME_KEY_STROKE} !important;  /* 枠線の色 */
       stroke-width: 2px;
+    }
+    .key text {
+      fill: ${THEME_TEXT_ON_KEY} !important;   /* キーレジェンドの色 */
     }
     /* 押下とコンボ */
     rect.held, rect.combo.held {
