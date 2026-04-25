@@ -50,7 +50,7 @@ GitHubの **Actionsタブ** から以下の手順で実行できます。
 
 1. リポジトリの **Actions** タブを開く
 2. 左のワークフロー一覧から **Draw Keymap** を選択
-3. **Run workflow** ボタンをクリック
+3. **Run workflow** ボタンをクリック (ブランチをお間違え無く)
 4. ドロップダウンからテーマ名を選んで **Run workflow** を実行
 
 > [!NOTE]
