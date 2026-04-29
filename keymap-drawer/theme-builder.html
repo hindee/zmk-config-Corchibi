@@ -236,7 +236,6 @@
 <header>
   <div>
     <h1>Corchibi Theme Builder</h1>
-    <p>カラーテーマを選んで <code style="color:var(--accent);font-size:0.72rem">theme.yaml</code> をダウンロード → <code style="color:var(--accent);font-size:0.72rem">keymap-drawer/themes/</code> に配置</p>
   </div>
   <span class="badge">BETA</span>
 </header>
@@ -269,7 +268,15 @@
 
   <div class="preview-area">
     <div class="preview-toolbar">
-      <span>PREVIEW — 実際のキーマップ画像</span>
+      <span>PREVIEW — キーマップ画像のイメージ</span>
+    </div>
+    <div style="font-size:0.72rem">
+      <p>1. ベースとなるカラーテーマを「プリセット」から選んで、下の「カラー設定」各色をカスタマイズ</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;ベースは作成済みの<code style="color:var(--accent)">***.yaml</code>選択またはドロップしてもOK</p><br>
+      <p>2. 下のDLボタンで<code style="color:var(--accent)">theme.yaml</code> をダウンロード → <code style="color:var(--accent)">keymap-drawer/themes/</code> に配置</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;または「YAMLをコピー」ボタンでコピーした内容を既存の<code style="color:var(--accent)">keymap-drawer/themes/***.yaml</code>に上書きしてもOK</p><br>
+      <p>3. <code style="color:var(--accent)">keymap-drawer/theme.txt/</code>をテーマ名（例:my-theme）で書き換え</p><br>
+      <p>4. コミットすれば完了。GitHubのDrawワークフローの完了後しばらく待つと画像が更新されます。</p><br>
     </div>
     <div class="preview-canvas">
       <div id="preview-container"></div>
@@ -787,8 +794,7 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<text x="926.0" y="2126.0" class="footer">Created with <a href="https://github.com/caksoylar/keymap-drawer">keymap-drawer</a></text></svg>
-`;
+</svg>`;
 
 // ---- Theme variables ----
 const VARS = [
